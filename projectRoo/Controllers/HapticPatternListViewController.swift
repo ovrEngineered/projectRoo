@@ -40,15 +40,15 @@ class HapticPatternListViewController: UIViewController {
         self.reloadFromNvStorage()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//            OneDriveHelper.sharedInstance.authenticate(parentVcIn: self) { (userEmail, error) in
-//                print(userEmail)
-//                print(error)
-//            }
-            
-            OneDriveHelper.sharedInstance.listRootFolderContents { (folderIn, error) in
-                print(folderIn)
+            OneDriveHelper.sharedInstance.authenticate(parentVcIn: self) { (userEmail, error) in
+                print(userEmail)
                 print(error)
             }
+            
+//            OneDriveHelper.sharedInstance.listRootFolderContents { (folderIn, error) in
+//                print(folderIn)
+//                print(error)
+//            }
         }
     }
     
