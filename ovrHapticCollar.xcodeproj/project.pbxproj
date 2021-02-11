@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		348604972586C50D00CCAAEC /* OneDriveHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348604962586C50D00CCAAEC /* OneDriveHelper.swift */; };
+		349BC9922584277A00CC6B0F /* HapticPatternListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BC9912584277A00CC6B0F /* HapticPatternListViewController.swift */; };
+		349BC997258429CA00CC6B0F /* HapticPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BC996258429CA00CC6B0F /* HapticPattern.swift */; };
+		349BC99A25842FD600CC6B0F /* AddEditHapticPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BC99925842FD600CC6B0F /* AddEditHapticPatternViewController.swift */; };
+		349BC99E25846A1400CC6B0F /* SelectAhap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BC99D25846A1400CC6B0F /* SelectAhap.swift */; };
+		401A89047C47465857F3FE06 /* Pods_ovrHapticCollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC715B2B5CBCAFB81E32671 /* Pods_ovrHapticCollar.framework */; };
 		C40B5724248A061D00BE4EE7 /* AHAP in Resources */ = {isa = PBXBuildFile; fileRef = C40B5723248A061D00BE4EE7 /* AHAP */; };
 		C40B5726248A067400BE4EE7 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40B5725248A067400BE4EE7 /* UIViewExtensions.swift */; };
 		C41B6AF6248A19C1000A8C44 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B6AF5248A19C1000A8C44 /* HapticsManager.swift */; };
@@ -19,13 +25,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		030ADBEE118EED778A542409 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		7044C93EC0DF26B98254470C /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
-		AB448547DEF5921FD9D9B092 /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		0DDDE6B4AE21D8627C012723 /* Pods-HapticControllers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HapticControllers.debug.xcconfig"; path = "Target Support Files/Pods-HapticControllers/Pods-HapticControllers.debug.xcconfig"; sourceTree = "<group>"; };
+		2B3D69DEFC603AA1FFA99515 /* Pods-ovrHapticCollar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ovrHapticCollar.debug.xcconfig"; path = "Target Support Files/Pods-ovrHapticCollar/Pods-ovrHapticCollar.debug.xcconfig"; sourceTree = "<group>"; };
+		348604962586C50D00CCAAEC /* OneDriveHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneDriveHelper.swift; sourceTree = "<group>"; };
+		349BC9912584277A00CC6B0F /* HapticPatternListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticPatternListViewController.swift; sourceTree = "<group>"; };
+		349BC996258429CA00CC6B0F /* HapticPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticPattern.swift; sourceTree = "<group>"; };
+		349BC99925842FD600CC6B0F /* AddEditHapticPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditHapticPatternViewController.swift; sourceTree = "<group>"; };
+		349BC99D25846A1400CC6B0F /* SelectAhap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAhap.swift; sourceTree = "<group>"; };
+		349BC9A725846D1300CC6B0F /* ovrHapticCollar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ovrHapticCollar.entitlements; sourceTree = "<group>"; };
+		60270E930D585C9B12577C49 /* Pods-ovrHapticCollar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ovrHapticCollar.release.xcconfig"; path = "Target Support Files/Pods-ovrHapticCollar/Pods-ovrHapticCollar.release.xcconfig"; sourceTree = "<group>"; };
+		BC41FDBEFC5E623958CC3531 /* Pods-HapticControllers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HapticControllers.release.xcconfig"; path = "Target Support Files/Pods-HapticControllers/Pods-HapticControllers.release.xcconfig"; sourceTree = "<group>"; };
 		C40B5723248A061D00BE4EE7 /* AHAP */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AHAP; sourceTree = "<group>"; };
 		C40B5725248A067400BE4EE7 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		C41B6AF5248A19C1000A8C44 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
-		C4886145248A04BC0066977B /* HapticControllers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HapticControllers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4886145248A04BC0066977B /* ovrHapticCollar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ovrHapticCollar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4886148248A04BC0066977B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C488614A248A04BC0066977B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C488614C248A04BC0066977B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +46,7 @@
 		C4886151248A04BD0066977B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4886156248A04BD0066977B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4992595248AF0FB00907E52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DDC715B2B5CBCAFB81E32671 /* Pods_ovrHapticCollar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ovrHapticCollar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,27 +54,85 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				401A89047C47465857F3FE06 /* Pods_ovrHapticCollar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		62676F385D9D2551D7FFA614 /* LICENSE */ = {
+		349BC986258423B200CC6B0F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7044C93EC0DF26B98254470C /* LICENSE.txt */,
+				349BC99925842FD600CC6B0F /* AddEditHapticPatternViewController.swift */,
+				349BC9912584277A00CC6B0F /* HapticPatternListViewController.swift */,
+				C488614C248A04BC0066977B /* MainViewController.swift */,
+				349BC99D25846A1400CC6B0F /* SelectAhap.swift */,
 			);
-			name = LICENSE;
-			path = LICENSE;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		C383CB6E4B752B91A516A1FE /* Configuration */ = {
+		349BC987258423BD00CC6B0F /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				AB448547DEF5921FD9D9B092 /* SampleCode.xcconfig */,
+				C40B5723248A061D00BE4EE7 /* AHAP */,
+				C4886151248A04BD0066977B /* Assets.xcassets */,
+				349BC988258423C500CC6B0F /* Storyboards */,
 			);
-			name = Configuration;
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		349BC988258423C500CC6B0F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C4992594248AF0FB00907E52 /* LaunchScreen.storyboard */,
+				C488614E248A04BC0066977B /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		349BC989258423F500CC6B0F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C41B6AF5248A19C1000A8C44 /* HapticsManager.swift */,
+				348604962586C50D00CCAAEC /* OneDriveHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		349BC98A2584241A00CC6B0F /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C4886156248A04BD0066977B /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		349BC995258429B800CC6B0F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				349BC996258429CA00CC6B0F /* HapticPattern.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6BF682EC127FB222AE8C76A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0DDDE6B4AE21D8627C012723 /* Pods-HapticControllers.debug.xcconfig */,
+				BC41FDBEFC5E623958CC3531 /* Pods-HapticControllers.release.xcconfig */,
+				2B3D69DEFC603AA1FFA99515 /* Pods-ovrHapticCollar.debug.xcconfig */,
+				60270E930D585C9B12577C49 /* Pods-ovrHapticCollar.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		965A14E63FCA09A1218543D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDC715B2B5CBCAFB81E32671 /* Pods_ovrHapticCollar.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		C41B6AF8248A307F000A8C44 /* Extensions */ = {
@@ -71,76 +143,60 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		C41B6AF9248A3093000A8C44 /* User Interface */ = {
-			isa = PBXGroup;
-			children = (
-				C488614C248A04BC0066977B /* MainViewController.swift */,
-				C488614E248A04BC0066977B /* Main.storyboard */,
-				C4992594248AF0FB00907E52 /* LaunchScreen.storyboard */,
-				C4886151248A04BD0066977B /* Assets.xcassets */,
-			);
-			path = "User Interface";
-			sourceTree = "<group>";
-		};
-		C41B6AFA248A30AA000A8C44 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				C4886148248A04BC0066977B /* AppDelegate.swift */,
-				C488614A248A04BC0066977B /* SceneDelegate.swift */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
 		C488613C248A04BC0066977B = {
 			isa = PBXGroup;
 			children = (
-				030ADBEE118EED778A542409 /* README.md */,
-				C4886147248A04BC0066977B /* HapticControllers */,
+				C4886147248A04BC0066977B /* ovrHapticCollar */,
 				C4886146248A04BC0066977B /* Products */,
-				C383CB6E4B752B91A516A1FE /* Configuration */,
-				62676F385D9D2551D7FFA614 /* LICENSE */,
+				6BF682EC127FB222AE8C76A1 /* Pods */,
+				965A14E63FCA09A1218543D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		C4886146248A04BC0066977B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C4886145248A04BC0066977B /* HapticControllers.app */,
+				C4886145248A04BC0066977B /* ovrHapticCollar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C4886147248A04BC0066977B /* HapticControllers */ = {
+		C4886147248A04BC0066977B /* ovrHapticCollar */ = {
 			isa = PBXGroup;
 			children = (
-				C41B6AF5248A19C1000A8C44 /* HapticsManager.swift */,
-				C40B5723248A061D00BE4EE7 /* AHAP */,
-				C41B6AFA248A30AA000A8C44 /* App */,
-				C41B6AF9248A3093000A8C44 /* User Interface */,
+				349BC9A725846D1300CC6B0F /* ovrHapticCollar.entitlements */,
+				C4886148248A04BC0066977B /* AppDelegate.swift */,
+				C488614A248A04BC0066977B /* SceneDelegate.swift */,
+				349BC987258423BD00CC6B0F /* Assets */,
+				349BC986258423B200CC6B0F /* Controllers */,
 				C41B6AF8248A307F000A8C44 /* Extensions */,
-				C4886156248A04BD0066977B /* Info.plist */,
+				349BC989258423F500CC6B0F /* Helpers */,
+				349BC995258429B800CC6B0F /* Models */,
+				349BC98A2584241A00CC6B0F /* SupportingFiles */,
 			);
-			path = HapticControllers;
+			path = ovrHapticCollar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C4886144248A04BC0066977B /* HapticControllers */ = {
+		C4886144248A04BC0066977B /* ovrHapticCollar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C4886159248A04BD0066977B /* Build configuration list for PBXNativeTarget "HapticControllers" */;
+			buildConfigurationList = C4886159248A04BD0066977B /* Build configuration list for PBXNativeTarget "ovrHapticCollar" */;
 			buildPhases = (
+				39F8A82A95CC3849761B3943 /* [CP] Check Pods Manifest.lock */,
 				C4886141248A04BC0066977B /* Sources */,
 				C4886142248A04BC0066977B /* Frameworks */,
 				C4886143248A04BC0066977B /* Resources */,
+				083FADACE31CA979B09B2EE3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = HapticControllers;
+			name = ovrHapticCollar;
 			productName = HapticControllers;
-			productReference = C4886145248A04BC0066977B /* HapticControllers.app */;
+			productReference = C4886145248A04BC0066977B /* ovrHapticCollar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -158,7 +214,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C4886140248A04BC0066977B /* Build configuration list for PBXProject "HapticControllers" */;
+			buildConfigurationList = C4886140248A04BC0066977B /* Build configuration list for PBXProject "ovrHapticCollar" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -171,7 +227,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C4886144248A04BC0066977B /* HapticControllers */,
+				C4886144248A04BC0066977B /* ovrHapticCollar */,
 			);
 		};
 /* End PBXProject section */
@@ -190,16 +246,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		083FADACE31CA979B09B2EE3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ovrHapticCollar/Pods-ovrHapticCollar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ovrHapticCollar/Pods-ovrHapticCollar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ovrHapticCollar/Pods-ovrHapticCollar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39F8A82A95CC3849761B3943 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ovrHapticCollar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C4886141248A04BC0066977B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				349BC99A25842FD600CC6B0F /* AddEditHapticPatternViewController.swift in Sources */,
+				349BC9922584277A00CC6B0F /* HapticPatternListViewController.swift in Sources */,
+				349BC997258429CA00CC6B0F /* HapticPattern.swift in Sources */,
 				C41B6AF6248A19C1000A8C44 /* HapticsManager.swift in Sources */,
 				C488614D248A04BC0066977B /* MainViewController.swift in Sources */,
 				C4886149248A04BC0066977B /* AppDelegate.swift in Sources */,
 				C40B5726248A067400BE4EE7 /* UIViewExtensions.swift in Sources */,
+				349BC99E25846A1400CC6B0F /* SelectAhap.swift in Sources */,
 				C488614B248A04BC0066977B /* SceneDelegate.swift in Sources */,
+				348604972586C50D00CCAAEC /* OneDriveHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +330,6 @@
 /* Begin XCBuildConfiguration section */
 		C4886157248A04BD0066977B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB448547DEF5921FD9D9B092 /* SampleCode.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -289,7 +391,6 @@
 		};
 		C4886158248A04BD0066977B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB448547DEF5921FD9D9B092 /* SampleCode.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -345,18 +446,21 @@
 		};
 		C488615A248A04BD0066977B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB448547DEF5921FD9D9B092 /* SampleCode.xcconfig */;
+			baseConfigurationReference = 2B3D69DEFC603AA1FFA99515 /* Pods-ovrHapticCollar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ovrHapticCollar/ovrHapticCollar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = HapticControllers/Info.plist;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J6S5594UXJ;
+				INFOPLIST_FILE = "$(SRCROOT)/ovrHapticCollar/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.HapticControllers${SAMPLE_CODE_DISAMBIGUATOR}";
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ovrengineered.hapticCollar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -366,18 +470,21 @@
 		};
 		C488615B248A04BD0066977B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB448547DEF5921FD9D9B092 /* SampleCode.xcconfig */;
+			baseConfigurationReference = 60270E930D585C9B12577C49 /* Pods-ovrHapticCollar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ovrHapticCollar/ovrHapticCollar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = HapticControllers/Info.plist;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J6S5594UXJ;
+				INFOPLIST_FILE = "$(SRCROOT)/ovrHapticCollar/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.HapticControllers${SAMPLE_CODE_DISAMBIGUATOR}";
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ovrengineered.hapticCollar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -388,7 +495,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C4886140248A04BC0066977B /* Build configuration list for PBXProject "HapticControllers" */ = {
+		C4886140248A04BC0066977B /* Build configuration list for PBXProject "ovrHapticCollar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C4886157248A04BD0066977B /* Debug */,
@@ -397,7 +504,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C4886159248A04BD0066977B /* Build configuration list for PBXNativeTarget "HapticControllers" */ = {
+		C4886159248A04BD0066977B /* Build configuration list for PBXNativeTarget "ovrHapticCollar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C488615A248A04BD0066977B /* Debug */,

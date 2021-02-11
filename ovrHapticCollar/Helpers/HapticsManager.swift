@@ -1,27 +1,27 @@
 /*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-The class that manages the app's haptics playback.
-*/
-
+ See LICENSE folder for this sample’s licensing information.
+ 
+ Abstract:
+ The class that manages the app's haptics playback.
+ */
 import Foundation
 import GameController
 import CoreHaptics
+
 
 protocol HapticsManagerDelegate: AnyObject {
     func didConnect(controller: GCController)
     func didDisconnectController()
 }
 
+
 class HapticsManager {
     
-    private var isSetup = false
+    //MARK: Public Static Properties
+    static let sharedInstance = HapticsManager()
     
-    private var controller: GCController?
-    // A haptic engine manages the connection to the haptic server.
-    private var engineMap = [GCHapticsLocality: CHHapticEngine]()
-   
+    
+    //MARK: Public Properties
     weak var delegate: HapticsManagerDelegate? {
         didSet {
             if delegate != nil {
@@ -30,81 +30,13 @@ class HapticsManager {
         }
     }
     
-    /// - Tag: StartObserving
-    private func startObserving() {
-        guard !isSetup else { return }
-        
-        let nc = NotificationCenter.default
-        
-        // Controller did connect observer.
-        NotificationCenter.default.addObserver(self,
-                       selector: #selector(controllerDidConnect),
-                       name: .GCControllerDidConnect,
-                       object: nil)
-        
-        // Controller did disconnect observer.
-        nc.addObserver(self, selector:
-                        #selector(controllerDidDisconnect),
-                       name: .GCControllerDidDisconnect,
-                       object: nil)
-        isSetup = true
-    }
+    //MARK: Private Properties
+    private var isSetup = false
+    private var controller: GCController?
+    private var engineMap = [GCHapticsLocality: CHHapticEngine]()
     
-    /// - Tag: ControllerDidConnect
-    @objc private func controllerDidConnect(notification: Notification) {
-        guard let controller = notification.object as? GCController else {
-            fatalError("Invalid notification object.")
-        }
-        
-        print("Connected \(controller.productCategory) game controller.")
-        
-        // Create a haptics engine for the controller.
-        guard let engine = createEngine(for: controller, locality: .default) else { return }
-        
-        // Configure the event handlers for the controller buttons.
-        delegate?.didConnect(controller: controller)
-        
-        self.engineMap[GCHapticsLocality.default] = engine
-        self.controller = controller
-    }
-
-    /// - Tag: CreateEngine
-    private func createEngine(for controller: GCController, locality: GCHapticsLocality) -> CHHapticEngine? {
-        // Get the controller's haptics (if one exists), and create a
-        // new CGHapticEngine for it, using the default locality.
-        guard let engine = controller.haptics?.createEngine(withLocality: locality) else {
-            print("Failed to create engine.")
-            return nil
-        }
-        
-        // The stopped handler alerts you of engine stoppage due to external causes.
-        engine.stoppedHandler = { reason in
-            print("The engine stopped because \(reason.message)")
-        }
-        
-        // The reset handler provides an opportunity for your app to restart the engine in case of failure.
-        engine.resetHandler = {
-            // Try restarting the engine.
-            print("The engine reset --> Restarting now!")
-            do {
-                try engine.start()
-            } catch {
-                print("Failed to restart the engine: \(error)")
-            }
-        }
-        return engine
-    }
     
-    @objc private func controllerDidDisconnect(notification: Notification) {
-        guard controller == notification.object as? GCController else { return }
-        
-        // dispose of engine and controller.
-        engineMap.removeAll(keepingCapacity: true)
-        controller = nil
-        delegate?.didDisconnectController()
-    }
-    
-    /// - Tag: PlayHapticsFile
+    //MARK: Public Methods
     func playHapticsFile(named filename: String, locality: GCHapticsLocality = .default) {
         // Update the engine based on locality.
         guard let controller = controller else {
@@ -142,9 +74,91 @@ class HapticsManager {
             print("An error occured playing \(filename): \(error).")
         }
     }
-
+    
+    
+    private init() { }
 }
 
+
+//MARK: - Private Methods
+extension HapticsManager {
+    
+    private func startObserving() {
+        guard !isSetup else { return }
+        
+        let nc = NotificationCenter.default
+        
+        // Controller did connect observer.
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(controllerDidConnect),
+                                               name: .GCControllerDidConnect,
+                                               object: nil)
+        
+        // Controller did disconnect observer.
+        nc.addObserver(self, selector:
+                        #selector(controllerDidDisconnect),
+                       name: .GCControllerDidDisconnect,
+                       object: nil)
+        isSetup = true
+    }
+    
+    
+    @objc private func controllerDidConnect(notification: Notification) {
+        guard let controller = notification.object as? GCController else {
+            fatalError("Invalid notification object.")
+        }
+        
+        print("Connected \(controller.productCategory) game controller.")
+        
+        // Create a haptics engine for the controller.
+        guard let engine = createEngine(for: controller, locality: .default) else { return }
+        
+        // Configure the event handlers for the controller buttons.
+        delegate?.didConnect(controller: controller)
+        
+        self.engineMap[GCHapticsLocality.default] = engine
+        self.controller = controller
+    }
+    
+    
+    private func createEngine(for controller: GCController, locality: GCHapticsLocality) -> CHHapticEngine? {
+        // Get the controller's haptics (if one exists), and create a
+        // new CGHapticEngine for it, using the default locality.
+        guard let engine = controller.haptics?.createEngine(withLocality: locality) else {
+            print("Failed to create engine.")
+            return nil
+        }
+        
+        // The stopped handler alerts you of engine stoppage due to external causes.
+        engine.stoppedHandler = { reason in
+            print("The engine stopped because \(reason.message)")
+        }
+        
+        // The reset handler provides an opportunity for your app to restart the engine in case of failure.
+        engine.resetHandler = {
+            // Try restarting the engine.
+            print("The engine reset --> Restarting now!")
+            do {
+                try engine.start()
+            } catch {
+                print("Failed to restart the engine: \(error)")
+            }
+        }
+        return engine
+    }
+    
+    
+    @objc private func controllerDidDisconnect(notification: Notification) {
+        guard controller == notification.object as? GCController else { return }
+        
+        // dispose of engine and controller.
+        engineMap.removeAll(keepingCapacity: true)
+        controller = nil
+        delegate?.didDisconnectController()
+    }
+}
+
+//MARK: - CHHapticEngine.StoppedReason
 extension CHHapticEngine.StoppedReason {
     var message: String {
         switch self {

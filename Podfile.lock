@@ -1,0 +1,39 @@
+PODS:
+  - DZNEmptyDataSet (1.8.1)
+  - Eureka (5.3.2)
+  - MSAL (1.0.7):
+    - MSAL/app-lib (= 1.0.7)
+  - MSAL/app-lib (1.0.7)
+  - MSGraphClientModels (1.3.0)
+  - MSGraphClientSDK (1.0.0):
+    - MSGraphClientSDK/Authentication (= 1.0.0)
+    - MSGraphClientSDK/Common (= 1.0.0)
+  - MSGraphClientSDK/Authentication (1.0.0)
+  - MSGraphClientSDK/Common (1.0.0):
+    - MSGraphClientSDK/Authentication
+
+DEPENDENCIES:
+  - DZNEmptyDataSet
+  - Eureka
+  - MSAL (~> 1.0.2)
+  - MSGraphClientModels (~> 1.3.0)
+  - MSGraphClientSDK (~> 1.0.0)
+
+SPEC REPOS:
+  trunk:
+    - DZNEmptyDataSet
+    - Eureka
+    - MSAL
+    - MSGraphClientModels
+    - MSGraphClientSDK
+
+SPEC CHECKSUMS:
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  Eureka: 1c2b8b5892bfb0e972d0fe05f8c09fd89f8625ec
+  MSAL: e4c1cbcf59e04073b427ce9fbfc0346b54abb62e
+  MSGraphClientModels: ffef6d0a1cdaa774e1689e38da35301cb74fc72a
+  MSGraphClientSDK: ffc07a58a838e0702c7bf2a856367035d4a335d7
+
+PODFILE CHECKSUM: e1004b479fdda0ebb04e9223e2294788b80a4a32
+
+COCOAPODS: 1.9.3

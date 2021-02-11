@@ -11,7 +11,7 @@ import GameController
 
 class MainViewController: UIViewController {
     
-    let manager: HapticsManager
+    let manager = HapticsManager.sharedInstance
 
     // 2 x 4 grid
     let maxColIndex = 1
@@ -56,7 +56,6 @@ class MainViewController: UIViewController {
     }
     
     required init?(coder: NSCoder) {
-        manager = HapticsManager()
         super.init(coder: coder)
         manager.delegate = self
     }

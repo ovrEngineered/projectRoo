@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h99-Fj-HPs">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17105"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="HapticControllers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ovrHapticCollar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -268,7 +269,114 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-633.33333333333337" y="147.99107142857142"/>
+            <point key="canvasLocation" x="104" y="-291"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ayD-bW-mmB">
+            <objects>
+                <navigationController id="h99-Fj-HPs" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kg1-2L-yfO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6JO-iN-aWc" kind="relationship" relationship="rootViewController" id="ZeS-V9-Fee"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dFY-I5-doS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-334" y="398"/>
+        </scene>
+        <!--ovrHapticCollar-->
+        <scene sceneID="cOs-mb-TkF">
+            <objects>
+                <viewController id="6JO-iN-aWc" customClass="HapticPatternListViewController" customModule="ovrHapticCollar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TFf-5y-Aoa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iSL-8j-1C7">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="hapticPatternTableViewCellIdentifier" textLabel="RUa-sS-hma" detailTextLabel="WbJ-xX-Ko4" style="IBUITableViewCellStyleSubtitle" id="PKc-qS-iPp">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="55.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PKc-qS-iPp" id="vUw-Ky-ZOn">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RUa-sS-hma">
+                                                    <rect key="frame" x="20" y="8.9999999999999982" width="33" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WbJ-xX-Ko4">
+                                                    <rect key="frame" x="19.999999999999996" y="31.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="6JO-iN-aWc" id="r5a-61-bTg"/>
+                                    <outlet property="delegate" destination="6JO-iN-aWc" id="jJE-Hv-tr0"/>
+                                    <outlet property="emptyDataSetDelegate" destination="6JO-iN-aWc" id="YJ7-gf-VKL"/>
+                                    <outlet property="emptyDataSetSource" destination="6JO-iN-aWc" id="9os-i1-7A1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="q8m-QS-xIF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iSL-8j-1C7" firstAttribute="top" secondItem="q8m-QS-xIF" secondAttribute="top" id="18U-vu-GII"/>
+                            <constraint firstItem="iSL-8j-1C7" firstAttribute="leading" secondItem="q8m-QS-xIF" secondAttribute="leading" id="YLg-kZ-jdd"/>
+                            <constraint firstItem="q8m-QS-xIF" firstAttribute="bottom" secondItem="iSL-8j-1C7" secondAttribute="bottom" id="nAh-Lm-kpe"/>
+                            <constraint firstItem="q8m-QS-xIF" firstAttribute="trailing" secondItem="iSL-8j-1C7" secondAttribute="trailing" id="oeE-vh-HxI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ovrHapticCollar" id="Q29-xt-hHN">
+                        <barButtonItem key="backBarButtonItem" title=" " id="w9H-45-deu"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="BA2-aT-VFo">
+                            <connections>
+                                <segue destination="XaG-J7-znl" kind="show" id="ZGg-KY-sYt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="iSL-8j-1C7" id="m1E-S3-3HY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dm5-9X-QJF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="575" y="398"/>
+        </scene>
+        <!--Create Haptic Pattern-->
+        <scene sceneID="A7T-Ci-A48">
+            <objects>
+                <viewController id="XaG-J7-znl" customClass="AddEditHapticPatternViewController" customModule="ovrHapticCollar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PCc-K8-fX9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="nOQ-y8-feu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create Haptic Pattern" id="J8R-Uz-7kI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BUM-aY-59i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1500" y="398"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

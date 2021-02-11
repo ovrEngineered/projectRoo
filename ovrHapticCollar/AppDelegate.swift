@@ -10,6 +10,11 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    //MARK: Public Properties
+    var window: UIWindow?
+    
+    
+    //MARK: App Lifecycle
     func application(_ application: UIApplication,
                      configurationForConnecting connectingSceneSession: UISceneSession,
                      options: UIScene.ConnectionOptions) -> UISceneConfiguration {
