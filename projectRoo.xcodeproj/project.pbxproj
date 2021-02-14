@@ -11,7 +11,7 @@
 		349BC9922584277A00CC6B0F /* HapticPatternListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BC9912584277A00CC6B0F /* HapticPatternListViewController.swift */; };
 		349BC997258429CA00CC6B0F /* HapticPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BC996258429CA00CC6B0F /* HapticPattern.swift */; };
 		349BC99A25842FD600CC6B0F /* AddEditHapticPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BC99925842FD600CC6B0F /* AddEditHapticPatternViewController.swift */; };
-		349BC99E25846A1400CC6B0F /* SelectAhap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BC99D25846A1400CC6B0F /* SelectAhap.swift */; };
+		349BC99E25846A1400CC6B0F /* SelectAhapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BC99D25846A1400CC6B0F /* SelectAhapViewController.swift */; };
 		401A89047C47465857F3FE06 /* Pods_ovrHapticCollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC715B2B5CBCAFB81E32671 /* Pods_ovrHapticCollar.framework */; };
 		C40B5724248A061D00BE4EE7 /* AHAP in Resources */ = {isa = PBXBuildFile; fileRef = C40B5723248A061D00BE4EE7 /* AHAP */; };
 		C40B5726248A067400BE4EE7 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40B5725248A067400BE4EE7 /* UIViewExtensions.swift */; };
@@ -31,7 +31,7 @@
 		349BC9912584277A00CC6B0F /* HapticPatternListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticPatternListViewController.swift; sourceTree = "<group>"; };
 		349BC996258429CA00CC6B0F /* HapticPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticPattern.swift; sourceTree = "<group>"; };
 		349BC99925842FD600CC6B0F /* AddEditHapticPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditHapticPatternViewController.swift; sourceTree = "<group>"; };
-		349BC99D25846A1400CC6B0F /* SelectAhap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAhap.swift; sourceTree = "<group>"; };
+		349BC99D25846A1400CC6B0F /* SelectAhapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAhapViewController.swift; sourceTree = "<group>"; };
 		349BC9A725846D1300CC6B0F /* projectRoo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = projectRoo.entitlements; sourceTree = "<group>"; };
 		60270E930D585C9B12577C49 /* Pods-ovrHapticCollar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ovrHapticCollar.release.xcconfig"; path = "Target Support Files/Pods-ovrHapticCollar/Pods-ovrHapticCollar.release.xcconfig"; sourceTree = "<group>"; };
 		BC41FDBEFC5E623958CC3531 /* Pods-HapticControllers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HapticControllers.release.xcconfig"; path = "Target Support Files/Pods-HapticControllers/Pods-HapticControllers.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 				349BC99925842FD600CC6B0F /* AddEditHapticPatternViewController.swift */,
 				349BC9912584277A00CC6B0F /* HapticPatternListViewController.swift */,
 				C488614C248A04BC0066977B /* MainViewController.swift */,
-				349BC99D25846A1400CC6B0F /* SelectAhap.swift */,
+				349BC99D25846A1400CC6B0F /* SelectAhapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -300,7 +300,7 @@
 				C488614D248A04BC0066977B /* MainViewController.swift in Sources */,
 				C4886149248A04BC0066977B /* AppDelegate.swift in Sources */,
 				C40B5726248A067400BE4EE7 /* UIViewExtensions.swift in Sources */,
-				349BC99E25846A1400CC6B0F /* SelectAhap.swift in Sources */,
+				349BC99E25846A1400CC6B0F /* SelectAhapViewController.swift in Sources */,
 				C488614B248A04BC0066977B /* SceneDelegate.swift in Sources */,
 				348604972586C50D00CCAAEC /* OneDriveHelper.swift in Sources */,
 			);

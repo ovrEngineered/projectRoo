@@ -11,6 +11,10 @@ import UIKit
 
 class AddEditHapticPatternViewController: FormViewController {
 
+    //MARK: Private Constants
+    private static let SID_SELECT_AHAP = "sid_selectAhap"
+    
+    
     //MARK: Public Properties
     var hapticPattern: HapticPattern?
     
@@ -80,7 +84,7 @@ class AddEditHapticPatternViewController: FormViewController {
                 row.tag = Row.MonoAhapData.rawValue
                 row.title = "Mono Ahap File"
                 row.noValueDisplayText = "Tap To Specify"
-//                row.presentationMode = PresentationMode.segueName(segueName: "sid_locationGroupToDistributorList", onDismiss: nil)
+                row.presentationMode = PresentationMode.segueName(segueName: AddEditHapticPatternViewController.SID_SELECT_AHAP, onDismiss: nil)
                 row.hidden = Condition.function([Row.AhapType.rawValue], { (form) -> Bool in
                     return ((form.rowBy(tag: Row.AhapType.rawValue) as! ActionSheetRow<HapticPattern.HapticType>).value != .Mono)
                 })

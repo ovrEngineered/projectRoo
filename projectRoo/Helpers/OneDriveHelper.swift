@@ -133,6 +133,9 @@ class OneDriveHelper: NSObject {
                         let newFolder = Folder(nameIn: currItem?.name ?? "???", idIn: currItem!.entityId)
                         retVal.addFolder(folderIn: newFolder)
                         self.enumerateAndAddChildrenToFolder(folderIn: newFolder, withDispatchGroup: grp)
+                    } else if( currItem?.file != nil ) {
+                        let newFile = File(nameIn: currItem?.name ?? "???", idIn: currItem!.entityId)
+                        retVal.addFile(fileIn: newFile)
                     }
                 }
                 
@@ -248,6 +251,9 @@ extension OneDriveHelper {
                         let newFolder = Folder(nameIn: currItem?.name ?? "???", idIn: currItem!.entityId)
                         folderIn.addFolder(folderIn: newFolder)
                         self.enumerateAndAddChildrenToFolder(folderIn: newFolder, withDispatchGroup: grp)
+                    } else if( currItem?.file != nil ) {
+                        let newFile = File(nameIn: currItem?.name ?? "???", idIn: currItem!.entityId)
+                        folderIn.addFile(fileIn: newFile)
                     }
                 }
             } catch {
